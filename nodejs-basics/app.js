@@ -44,20 +44,24 @@ fs.readdir('./', function(err, files){
 });
 
 /** Event Module
- ** capitalized to indicate a Class
- ** Class - container of defined properties/methods
  ** Class: Human | Object: John (inst. of Human)
 */
-const EventEmitter = require('events'); //Class
-const emitter = new EventEmitter(); //Object
+const EventEmitter = require('events'); // Class: container of defined properties/methods
+const emitter = new EventEmitter();     // Object: instance of Class
 
 // Register a listener
-emitter.on('messageLogged', function(){
-  console.log('Event Listener called');
+emitter.on('messageLogged', (arg) => { // e, eventArg
+  console.log('Event Listener called', arg);
 });
+emitter.on('messageLogged', loggingEvent);
 
 // Raise an event
-emitter.emit('messageLogged',);
+emitter.emit('messageLogged', {id: 1, url: "http://"});
+
+// Raise: logging (data: message)
+function loggingEvent(message){
+  console.log('Event Listener called:', message);
+}
 
 
 
