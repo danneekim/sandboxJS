@@ -12,14 +12,23 @@
  ** console.log(__dirname);
 */
 
-/** Logger Module*/
-const logger = require("./logger");
-logger('testing logger module');
+
+/** Logger Module extends EventEmitter*/
+const EventEmitter = require('events');
+
+const Logger = require('./logger');
+const logger = new Logger();
+
+// Register a listener
+logger.on('messageLogged', (arg) => {
+  console.log('Listener called', arg);
+})
+logger.log('message');
 
 /** Path Module*/
 const path = require('path');
 var pathObj = path.parse(__filename);
-logger(pathObj);
+console.log(pathObj);
 
 /** OS Module*/
 const os = require('os');
@@ -43,35 +52,29 @@ fs.readdir('./', function(err, files){
   }
 });
 
-/** Event Module
- ** Class: Human | Object: John (inst. of Human)
-*/
-const EventEmitter = require('events'); // Class: container of defined properties/methods
-const emitter = new EventEmitter();     // Object: instance of Class
+/** Event Module*/
+// const EventEmitter = require('events'); // Class: container of defined properties/methods
+// const emitter = new EventEmitter();     // Object: instance of Class
 
-// Register a listener
-emitter.on('messageLogged', (arg) => { // e, eventArg
-  console.log('Event Listener called', arg);
-});
-emitter.on('messageLogged', loggingEvent);
+// // Register a listener
+// emitter.on('messageLogged', (arg) => { // e, eventArg
+//   console.log('Event Listener called', arg);
+// });
+// emitter.on('messageLogged', loggingEvent);
 
-// Raise an event
-emitter.emit('messageLogged', {id: 1, url: "http://"});
+// // Raise an event
+// emitter.emit('messageLogged', {id: 1, url: "http://"});
 
-// Raise: logging (data: message)
-function loggingEvent(message){
-  console.log('Event Listener called:', message);
-}
+// // Raise: logging (data: message)
+// function loggingEvent(message){
+//   console.log('Event Listener called:', message);
+// }
 
 
 
 
 
-
-
-
-
-setTimeout(function(){ logger("Hello World"); }, 2000); // Hello after 2s delay
+setTimeout(function(){ console.log("Hello World"); }, 2000); // Hello after 2s delay
 clearTimeout();
 // setInterval(); //repeated fxn call after delay
 // clearInterval();
