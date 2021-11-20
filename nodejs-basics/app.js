@@ -15,7 +15,6 @@
 
 /** Logger Module extends EventEmitter*/
 const EventEmitter = require('events');
-
 const Logger = require('./logger');
 const logger = new Logger();
 
@@ -72,10 +71,8 @@ fs.readdir('./', function(err, files){
 
 
 
-
-
-setTimeout(function(){ console.log("Hello World"); }, 2000); // Hello after 2s delay
-clearTimeout();
+// setTimeout(function(){ console.log("Hello World"); }, 2000); // Hello after 2s delay
+// clearTimeout();
 // setInterval(); //repeated fxn call after delay
 // clearInterval();
 
