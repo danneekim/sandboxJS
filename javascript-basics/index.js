@@ -36,6 +36,7 @@ let fName = undefined; //undefined
 let lName = null;      //null
 
 // Reference Types
+// Objects
 let person = {}        //object
 person = {
   name: "Dannee",
@@ -58,7 +59,6 @@ arrayOfColors[2] = 'green';
 console.log(arrayOfColors);
 
 // Functions
-
 function greet(name, lastName){
   console.log(`Hello ${name} ${lastName}`);
 }
@@ -67,15 +67,89 @@ greet('Timmy', "Smith");
 function square(number){
   return number * number;
 }
-
 let number = square(2);
 console.log(number);
 
+// Conditional Statement
+/**
+ * Hour
+ * If hour is between 6am and 12pm: Good morning
+ * If it is between 12pm and 6pm: Good afternoon
+ * Otherwise: Good Evening!
+*/
+var hour = 20;
+if(hour >= 6 && hour <= 12){
+  console.log('Good Morning');
+} else if ( hour > 12 && hour <= 18){
+  console.log('Good Afternoon');
+} else {
+  console.log('Good Evening!');
+}
 
+let role = "guest";
+switch(role){
+  case 'guest':
+    console.log('Guest User');
+    break;
+  case 'moderator':
+    console.log('Moderator User');
+    break;
+  default:
+    console.log('Unknown user');
+}
 
+// Loops
+/* log odd number from 1 to 5 */
 
+// for
+for (let i = 0; i <= 5; i++){
+  if(i%2 !== 0) console.log(i);
+}
 
+// while
+let i = 0;
+while (i <= 5){
+  if(i % 2 !== 0) console.log(i);
+  i++; // req. to avoid infinite
+}
 
+// do-while (statement runs at least once)
+let j = 9;
+do {
+  if( j % 2 !== 0) console.log(j);
+  j++; // req. to avoid infinite
+} while (j <= 5);
+
+// for-in (iteration of object properties)
+const myBio = {
+  name: "Dannee",
+  age: 27,
+}
+for (let key in myBio){
+  console.log(key, myBio[key]);
+}
+
+const colors = ['red', 'green', 'blue'];
+for (let index in colors){
+  console.log(index, colors[index]);
+}
+
+// for-of(iterate arrays)
+for (let color of colors){
+  console.log(color);
+}
+
+// break & continue
+let k = 0;
+while (k <= 10){
+  if (k === 5) break;
+  if(k % 2 === 0){
+    k++;
+    continue;
+  }
+  console.log(k);
+  k++;
+}
 
 
 
