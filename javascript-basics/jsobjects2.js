@@ -1,31 +1,3 @@
-/** Primitive vs References Types
- * Primitive Types:
- ** are independent & copied by the value. 
- *** [ Number, String, Boolean, Symbol, undefined, null ]
-
- * Reference Types = Object, Function, Arrays
- ** are dependent & copied by their reference obj in memory.
- *** [ Objects, Functions, Arrays ] 
-*/
-
-// a !== b
-let a = 10;
-let b  = a;
-a = 20;
-
-// c === d
-let c = {value:10};
-let d = c;
-c.value = 20;
-
-// ie-
-let number = {value: 10};
-function increase(obj){
-  obj.value++;
-}
-increase(number);
-console.log(number);
-
 // Enumerating Properties of an Object
 const circle = {
   radius: 1,

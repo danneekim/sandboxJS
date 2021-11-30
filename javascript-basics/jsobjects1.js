@@ -1,13 +1,8 @@
-console.log('Hello - index2.js');
-
-// let radius = 1;
-// let x = 1;
-// let y = 1;
-// let isVisible = true;
-// function draw(){ console.log('draw')};
-// function move(){ console.log('move')}.
-
 // Object Oriented Programming (OOP)
+/**
+ * Camel Notation: oneTwoThreeFour 
+ * Pascal Notation: OneTwoThreeFour 
+ */
 
 // Object
 const circle = {
@@ -23,10 +18,7 @@ const circle = {
 }
 circle.draw();
 
-/*Camel Notation: oneTwoThreeFour  */
-/*Pascal Notation: OneTwoThreeFour */
-
-// Factory Functions (camel)
+// Factory Function (camelCased)
 function createCircle(radius,location,isVisible,){
   return {
     radius: radius, // radius,
@@ -52,7 +44,7 @@ const circle2 = createCircle(2,{x:2,y:2},true);
 console.log(circle2);
 
 
-// Constructor Functions (pascal)
+// Constructor Functions (Pascal-cased)
 function Circle(radius,location,isVisible){
   this.radius = radius,
   this.location = location,
@@ -95,6 +87,8 @@ function CircleV2(radius){
 // CircleV2.call({}, 1,);
 // CircleV2.apply({}, 1, [1,2,3]);
 const v2 = new CircleV2(2);
+
+
 
 
 
