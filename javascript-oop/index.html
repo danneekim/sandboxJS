@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS OOP</title>
+</head>
+<body>
+  <h2>What is Object-Oriented Programming?</h2>
+  <p>OOP is a programming paradigms centered around <b><u>objects</u></b> rather than functions.</p>
+  
+  <ul>
+    <li>OOP is <b><u>not</u></b> a progamming language or tool.</li>
+    <li>OOP is a style of programming <i>ie - programming paradigm</i></li>
+    <li>OOP-supported languages:
+      <ul>
+        <li>C#</li>
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>4 Pillars of Object-oriented Programming</h2>
+  <ul>
+    <li>
+      <b>Encapsulation</b>: reduces complexity + increases reusability
+      <ul>
+        <li>groups of related variables (<i>properties</i>) & functions (<i>methods</i>) into a single unit (<i>object</i>).</li>
+      </ul>
+    </li>
+    <li>
+      <b>Abstraction</b>: reduces complexity + isolates impact of change
+      <ul>
+        <li>reduces complexity by only exposing few properties/methods.</li>
+        <li>simpler object interface, reduced impact of change.</li>
+        <li>ie - DVD player</li>
+      </ul>
+    </li>
+    <li>
+      <b>Inheritance</b>: eliminates redundant code
+      <ul>
+        <li>eliminates redundant code via generic object w. related properties/methods.</li>
+        <li>ie - HTMLElements - <i>TextBox/Select/Checkbox</i></li>
+      </ul>
+    </li>
+    <li>
+      <b>Polymorphism</b>: refactor ugly/switch statements
+      <ul>
+        <li>Polymorphism means having many forms</li>
+        <li>For example - A person at the same time can have different characteristics</li>
+        <li>ie - A man at the same time can be a father, a husband, an employee.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Pro vs Cons of Procedural Progamming</h3>
+  <ul>
+    <li><b>Pros:</b> Easy to understand basic concept of objects and meaning of methods calls.</li>
+    <li><b>Cons:</b> Can be messy. Too many parameters. Spaghetti code. Potential side effects, bugs, etc</li>
+  </ul>
+  <pre>
+    <code class="language-javascript">
+      // Procedural Programming
+      let baseSalary = 30_000;
+      let overTime = 10;
+      let rate = 20;
+
+      function getWage(baseSalary, overTime, rate) {
+        return baseSalary + (overTime * rate);
+      }
+
+      // OOP
+      let employeee = {
+        baseSalary: 30_000,
+        overtime: 10,
+        rate: 20,
+        getWage: function(){
+          return this.baseSalary + (this.overtime * this.rate);
+        }
+      }
+      employeee.getWage();
+    </code>
+  </pre>
+
+  <h4>Object Oriented Programming</h4>
+  <ul>
+    <li><b>Pros:</b> OOP combines groups of related variables (<i>properties</i>) and functions (<i>methods</i>) into a single unit (<i>object</i>).</li>
+    <li></li>
+    <li></li>
+  </ul>
+  <pre>
+    <code lang="language-javascript">
+      let employeee = {
+        baseSalary: 30_000,
+        overtime: 10,
+        rate: 20,
+        getWage: function(){
+          return this.baseSalary + (this.overtime * this.rate);
+        }
+      }
+      employeee.getWage();
+    </code>
+  </pre>
+  
+      
+</body>
+</html>
