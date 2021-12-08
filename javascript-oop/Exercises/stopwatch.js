@@ -19,13 +19,13 @@ function StopWatch(){
   let endTime = 0;
   let duration = 0;
 
-  this.start = function(){
+  this.start = () =>{
     if(running){
       throw new Error('Stopwatch has already started');
     }
     running = true;
     startTime = new Date();
-  }
+  };
 
   this.stop = function(){
     if(!running){
@@ -34,13 +34,14 @@ function StopWatch(){
     running = false;
     endTime = new Date();
 
+
     const seconds = (endTime.getTime() - startTime.getTime())/1000;
     duration += seconds;
   }
 
   this.reset = function(){
-    startTime = null;
-    endTime = null;
+    startTime = 0;
+    endTime = 0;
     running = false;
     duration = 0;
   }

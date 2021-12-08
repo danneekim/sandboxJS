@@ -9,17 +9,17 @@ const circle = {
 // Factory function 
 function createCircle(radius) { 
   return {
-     radius, 
-     draw: function() {}
+    radius, 
+    draw: function() {}
   } 
 } 
 
 // Constructor function 
 function Circle(radius) { 
-   this.radius = radius; 
-   this.draw = function() {}
+  this.radius = radius; 
+  this.draw = function() {}
 } 
-   
+
 // Every object has a "constructor" property which returns the function that was used to construct or create that object. 
 const x = {};
 x.constructor; // returns Object() 
@@ -40,15 +40,15 @@ circle.location = {};
 circle['location'] = {};
 
 delete circle.location; 
-                     
+
 // To enumerate the members in an object: 
 for (let key in circle) console.log(key, circle[key]);
 
 Object.keys(circle); 
-                     
+
 // To see if an object has a given property
 if ('location' in circle)
-                     
+
 // Abstraction means hiding the complexity/details and showing only the essentials. 
 // We can hide the details by using private members. Replace "this" with "let". 
 
@@ -61,8 +61,7 @@ function Circle(radius) {
 }                       
 
 // To define a getter/setter, use Object.defineProperty():
-
 Object.defineProperty(this, 'defaultLocation', {
-   get: function() { return defaultLocation; },
-   set: function(value) { defaultLocation = value; }
+  get: function() { return defaultLocation; },
+  set: function(value) { defaultLocation = value; }
 });
