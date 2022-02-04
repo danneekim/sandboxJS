@@ -1,33 +1,32 @@
-console.log('Hello World');
+console.log("Hello World");
 // alert('This is a alert');
 
 // Variables
-var fullName = "Dannee Kim" //global-scope 
+var fullName = "Dannee Kim"; //global-scope
 let firstName = "Dannee"; //block-scope
 const lastName = "Kim"; //readonly
 
-/** Variables 
+/** Variables
  * Cannot be a reserved keyword
  * Should be meaningful
  * Cannot start with a number (1name)
  * Cannot contain a space or hyphen (-)
  * Are case-sensitive
-*/
+ */
 
 /** Static vs Dynamic Languages
- * Static Typed 
-    * String name = 'Dannee'; 
-    * In statically-typed languages - type CANNOT be changed   
+ * Static Typed
+ * String name = 'Dannee';
+ * In statically-typed languages - type CANNOT be changed
  * Dyanamic Type
-    * JS is a dynamically-typed language
-    * let name = "Dannee";
-    * In dynamically-typed can be changed - type CAN be changed    
-    * EX:
-    ** typeof(name); //string
-    ** name = 0;
-    ** typeof(name); //number
-*/
-
+ * JS is a dynamically-typed language
+ * let name = "Dannee";
+ * In dynamically-typed can be changed - type CAN be changed
+ * EX:
+ ** typeof(name); //string
+ ** name = 0;
+ ** typeof(name); //number
+ */
 
 /** Primitive vs References Types
  * Primitive Types:
@@ -41,51 +40,49 @@ const lastName = "Kim"; //readonly
 
 // a !== b (primitive)
 let a = 10;
-let b  = a;
+let b = a;
 a = 20;
 
 // c === d (reference)
-let c = {value:10};
+let c = { value: 10 };
 let d = c;
 c.value = 20;
+console.log("hereee", d);
 
 // ie-
-let number = {value: 10};
-function increase(obj){
+let number = { value: 10 };
+function increase(obj) {
   obj.value++;
 }
 console.log(increase(number));
 
 // Objects
-let person = {}
+let person = {};
 person = {
   name: "Dannee",
-  age: 27
-}
+  age: 27,
+};
 //Dot Notation
-person.name = "Dan"
+person.name = "Dan";
 //Bracket Notation
-person['name'] = "John"
+person["name"] = "John";
 //Bracket Notation (v2)
 let selected = "name";
-person[selected] = "Mary"
+person[selected] = "Mary";
 console.log(person);
 
-
 // Arrays
-let arrayOfColors = ['red','blue'];
-arrayOfColors[2] = 'green';
-
+let arrayOfColors = ["red", "blue"];
+arrayOfColors[2] = "green";
 
 // Functions
-function greet(name, lastName){
+function greet(name, lastName) {
   console.log(`Hello ${name} ${lastName}`);
 }
-greet('Timmy', "Smith");
+greet("Timmy", "Smith");
 
-function square(number){
+function square(number) {
   return number * number;
 }
-let number = square(2);
-console.log(number);
-
+// let number = square(2);
+// console.log(number);
