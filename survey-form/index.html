@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Coding Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">short description of a survey.</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <!-- Basic Info -->
+        <label id="name-label" for="name"
+          >Name:
+          <input id="name" type="text" required placeholder="Provide your name"
+        /></label>
+        <label id="email-label" for="email"
+          >Email:
+          <input id="email" type="email" required placeholder="email@test.com"
+        /></label>
+        <label id="number-label" for="number"
+          >Age:
+          <input
+            id="number"
+            type="number"
+            min="18"
+            max="120"
+            placeholder="Provide your age"
+        /></label>
+
+        <!-- Dropdown -->
+        <label for="dropdown"
+          >What is your current occupation?
+          <select id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Professional</option>
+            <option value="3">Other</option>
+          </select>
+        </label>
+
+        <!-- Radios -->
+        <fieldset>
+          <caption>
+            Do you recommend coding?
+          </caption>
+          <label for="yesRecommend">
+            <input
+              id="yesRecommend"
+              type="radio"
+              name="recommend"
+              class="inline"
+              value="true"
+            />
+            Yes</label
+          >
+          <label for="noRecommend">
+            <input
+              id="noRecommend"
+              type="radio"
+              name="recommend"
+              class="inline"
+              value="false"
+            />
+            No</label
+          >
+        </fieldset>
+
+        <!-- Checkbox -->
+        <fieldset>
+          <caption>
+            What do you prefer?
+          </caption>
+          <label for="frontend">
+            <input
+              id="frontend"
+              type="checkbox"
+              name="preference"
+              class="inline"
+              value="FE"
+            />
+            Frontend</label
+          >
+          <label for="backend">
+            <input
+              id="backend"
+              type="checkbox"
+              name="preference"
+              class="inline"
+              value="BE"
+            />
+            Backend</label
+          >
+        </fieldset>
+
+        <!-- Textarea -->
+        <fieldset>
+          <caption>
+            Any comments or suggestions?
+          </caption>
+          <label for="comments">
+            <textarea
+              id="comments"
+              name="comments"
+              rows="3"
+              cols="30"
+              placeholder="Enter your comments here"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <!-- Submit -->
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </main>
+  </body>
+</html>
