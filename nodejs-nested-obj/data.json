@@ -1,0 +1,26 @@
+{
+  "Dan": {
+    "name": "Dan",
+    "age": 29,
+    "pets": {
+      "popcorn": {
+        "name": "popcorn",
+        "animal": "dog",
+        "breed": "malthese",
+        "color": "white"
+      }
+    }
+  },
+  "Joe": {
+    "name": "Joe",
+    "age": 29,
+    "pets": {
+      "butter": {
+        "name": "butter",
+        "animal": "cat",
+        "breed": "sphinx",
+        "color": "golden"
+      }
+    }
+  }
+}
